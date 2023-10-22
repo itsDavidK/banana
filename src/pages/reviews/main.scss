@@ -1,0 +1,266 @@
+@import "../../styles/utils/vars";
+@import "../../styles/utils/mixins";
+
+.page-title-reviews {
+  margin: 0;
+  position: relative;
+  display: inline-block;
+
+
+  font-family: $sugo-pro-display;
+  color: $white-text-color;
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 52px; /* 100% */
+  letter-spacing: 3.12px;
+  text-transform: uppercase;
+
+  text-shadow: -1px -1px 0px #000000,
+    1.5px 1.5px 0px #000000,
+    2px 2px 0px #808080;
+
+  @include onBigTablet {
+    font-size: 70px;
+    line-height: 70px; /* 100% */
+    letter-spacing: 4.2px;
+
+  }
+
+  @include onSmallDesktop {
+    font-size: 5.6rem;
+    line-height: 6rem;
+    text-shadow: -1px -1px 0px #000000,
+      1.5px 1.5px 0px #000000,
+      2px 2px 0px #808080;
+  }
+  
+
+  &--yellow {
+    color: $main-yellow-text-color;
+  }
+
+  &--pink {
+    color: $pink2-text-color;
+  }
+}
+
+.reviews-main {
+  &__content {
+    display: grid;
+    grid-template-columns: minmax(320px, 500px);
+    row-gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+    @include onBigTablet {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 40px;
+    }
+  }
+
+  &__page-title {
+    &--position {
+      margin-bottom: 26px;
+    }
+  }
+
+  &__card {
+    width: 100%;
+    height: max-content;
+    box-sizing: border-box;
+    background: url(../../images/reviews_bg.png);
+    background-size: 100% 100%;
+    padding: 30px 25px;
+    padding-left: 35px;
+
+    @include onBigTablet {
+      background: url(../../images/reviews_desktop_bg.png);
+      background-size: 100% 100%;
+    }
+
+    @include onDesktop {
+      padding: 32px 80px;
+    }
+
+    &--doshed-bg {
+      height: max-content;
+      background-image: url(../../images/reviews_doshed_bg.png);
+      background-size: 100% 100%;
+
+      @include onBigTablet {
+        background: url(../../images/reviews_doshed_desktop_bg.png);
+        background-size: 100% 100%;
+      }
+    }
+
+    &--position-1 {
+
+      @include onDesktop {
+        margin-right: 80px;
+      }
+    }
+
+    &--position-2 {
+      @include onDesktop {
+        margin-left: 50px;
+      }
+    }
+
+    &--change-bg-1 {
+      background: url(../../images/reviews_bg.png);
+      background-size: 100% 100%;
+
+      @include onBigTablet {
+        background: url(../../images/reviews_doshed_desktop_bg.png);
+        background-size: 100% 100%;
+      }
+    }
+
+    &--change-bg-2 {
+      background: url(../../images/reviews_doshed_bg.png);
+      background-size: 100% 100%;
+
+      @include onBigTablet {
+        background: url(../../images/reviews_desktop_bg.png);
+        background-size: 100% 100%;
+      }
+    }
+  }
+
+  &__top {
+    // padding-top: 10px;
+    display: flex;
+    column-gap: 0.35rem;
+
+    margin-bottom: 20px;
+
+    @include onBigTablet {
+      margin-bottom: 16px;
+    }
+
+    @include onSmallDesktop {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__star {
+    width: 22px;
+
+    @include onBigTablet {
+      width: 26px;
+    }
+
+    @include onSmallDesktop {
+      width: 32px;
+    }
+  }
+
+  &__review {
+    margin: 0;
+    margin-bottom: 24px;
+
+    color: $white-text-color;
+    font-family: $fira-code;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 184.615% */
+    letter-spacing: 0.52px;
+
+    @include onBigTablet {
+      margin-bottom: 16px;
+      letter-spacing: 0.78px;
+    }
+
+    @include onDesktop {
+      margin-bottom: 28px;
+
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 30px; /* 150% */
+      letter-spacing: 1.2px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+  }
+
+  &__client-img {
+    width: 48px;
+    height: 48px;
+
+    @include onBigTablet {
+      width: 52px;
+      height: 52px;
+    }
+
+    @include onDesktop {
+      width: 68px;
+      height: 68px;
+    }
+
+    margin-right: 1.5rem;
+  }
+
+  &__name {
+    color: $main-yellow-text-color;
+    font-family: $fira-code;
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.1rem; /* 125% */
+    letter-spacing: 1.08px;
+    text-transform: uppercase;
+
+    @include onDesktop {
+      font-size: 1.4rem;
+      line-height: 1.4rem; /* 125% */
+    }
+  }
+
+  &__position {
+    color: $pink-text-color;
+    font-family: $fira-code;
+    font-size: .8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px; /* 230.769% */
+    letter-spacing: 0.52px;
+
+    @include onBigTablet {
+      font-size: 16px;
+      letter-spacing: 0.64px;
+    }
+
+    @include onDesktop {
+      font-size: 22px;
+      letter-spacing: 1.32px;
+    }
+  }
+
+  &__review-bottom {
+    display: flex;
+    flex-direction: row;
+    row-gap: 1rem;
+
+    @include onTablet {
+      flex-direction: row;
+      row-gap: 1rem;
+    }
+
+    @include onDesktop {
+      row-gap: 3rem;
+    }
+  }
+  
+  &__review-bottom-info {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+  }
+}

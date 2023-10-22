@@ -1,0 +1,43 @@
+@import 'vars';
+
+@mixin onPhone {
+  @media (min-width: $phone-min-width) {
+    @content;
+  }
+}
+
+@mixin onBigPhone {
+  @media (min-width: $big-phone-min-width) {
+    @content;
+  }
+}
+
+@mixin onTablet {
+  @media (min-width: $tablet-min-width) {
+    @content;
+  }
+}
+
+@mixin onBigTablet {
+  @media (min-width: $tablet2-min-width) {
+    @content;
+  }
+}
+
+@mixin onSmallDesktop {
+  @media (min-width: $small-desktop-min-width) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media (min-width: $desktop-min-width) {
+    @content;
+  }
+}
+
+@mixin onBigDesktop {
+  @media (min-width: $big-desktop-min-width) {
+    @content;
+  }
+}

@@ -1,0 +1,182 @@
+@import "../../../styles/utils/vars";
+@import "../../../styles/utils/mixins";
+
+.card {
+  box-sizing: border-box;
+  max-width: 320px;
+  width: 100%;
+  padding: 1rem 1.8rem;
+  margin-bottom: .5rem;
+
+  background: url('../../../images/cart_bg.svg');
+  background-size: cover;
+  background-position: center;
+
+  &--1 {
+    display: block;
+  }
+
+  &--2 {
+    display: block;
+  }
+
+  &--3 {
+    display: block;
+  }
+
+  &--4 {
+    display: none;
+
+    @include onTablet {
+      display: block;
+    }
+  }
+
+  &--5 {
+    display: none;
+
+
+    @include onTablet {
+      display: block;
+    }
+  }
+
+  &--6 {
+    display: none;
+
+    @include onTablet {
+      display: block;
+    }
+
+  }
+
+  //column-2
+  &--7 {
+    display: block;
+  }
+
+  &--8 {
+    display: block;
+  }
+
+  &--9 {
+    display: block;
+  }
+
+  &--10 {
+    display: none;
+
+    @include onSmallDesktop {
+      display: block;
+    }
+  }
+
+  &--11 {
+    display: none;
+
+    @include onSmallDesktop {
+      display: block;
+    }
+  }
+
+
+  &__avatar {
+    width: 50px;
+    height: 4.5rem;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 25px;
+
+    margin-bottom: 20px;
+
+    box-sizing: border-box;
+  }
+
+  &__bottom {
+    display: flex;
+    column-gap: 10px;
+
+    box-sizing: border-box;
+  }
+
+  &__detail {
+    display: inherit;
+    flex-direction: column;
+    width: 100%;
+
+    color: $white-text-color;
+
+    &-top {
+      display: inherit;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+
+      margin-bottom: 12px;
+    }
+
+    &-bottom {
+      font-family: $fira-code;
+    }
+  }
+
+  &__name {
+    margin: 0;
+
+    font-family: $sugo-pro-display;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.92px;
+    text-transform: uppercase;
+  }
+
+  &__rate {
+    margin: 0;
+
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  &__position {
+    margin: 0;
+    margin-bottom: 6px;
+
+    font-size: .65rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.52px;
+    text-transform: uppercase;
+  }
+
+  &__experience {
+    margin: 0;
+
+    color: $pink-text-color;
+    font-size: .7rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.52px;
+  }
+
+  &__skill {
+    padding: 5px;
+    border: 1px dashed $main-yellow-text-color;
+
+    color: $white-text-color;
+    font-family: $fira-code;
+    font-size: .5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.6px;
+  }
+}

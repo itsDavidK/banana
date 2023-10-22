@@ -1,0 +1,319 @@
+@import "../../../styles/utils/vars";
+@import "../../../styles/utils/mixins";
+
+.logo {
+  width: 10rem;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+
+
+  transition: top .4s;
+
+  background-color: #000;
+
+  @include onTablet {
+    box-shadow: 0px 40px 50px 10px #000;
+  }
+
+  &--close {
+    top: -100%;
+
+    transition: top .7s;
+  }
+
+  &--pocketbook {
+    position: relative;
+    top: 0;
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+  &--none-shadow {
+    position: relative;
+    box-shadow: none;
+  }
+
+  &__portfolio {
+    @include onTablet {
+      box-shadow: none;
+    }
+  }
+
+  &__content {  
+
+    // @include onTablet {
+    //   box-shadow: 20px 50px 40px #000000;
+    // }
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    // margin-bottom: 1rem;
+    padding-top: 18px;
+  }
+
+  &__menu-img {
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+
+  &__left-block {
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+  }
+
+  &__menu {
+    &-right {
+      display: block;
+    
+      @include onTablet {
+        display: none;
+      }
+    }
+
+    &-left {
+      display: none;
+
+      @include onTablet {
+        display: block;
+      }
+
+      @include onSmallDesktop {
+        display: none;
+      }
+    }
+  }
+
+  &__right-block {
+    display: flex;
+    align-items: center;
+  }
+
+  &__nav-list {
+    display: none;
+
+    @include onSmallDesktop {
+      display: flex;
+      column-gap: 40px;
+      margin-right: 50px;
+    }
+  }
+
+  &__nav-link {
+    color: $white-text-color;
+    font-family: Fira Code;
+    font-size: 1.1rem;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px; /* 150% */
+    letter-spacing: 0.4px;
+
+    &--about-us {
+      &:hover {
+        color: $pink2-text-color;
+      }
+    }
+
+    &--portfolio {
+      &:hover {
+        color: $pink-text-color;
+      }
+    }
+
+    &--reviews {
+      &:hover {
+        color: $blue-text-color;
+      }
+    }
+  }
+
+  &__button {
+    display: none;
+
+    @include onTablet {
+      display: block;
+      padding: .6rem 1.5rem;
+
+      border: 2px solid $sub-yellow-text-color;
+      background-color: transparent;
+
+      font-family: "Fira Code";
+      color: #F7E439;
+      text-align: center;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 600;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $sub-yellow-text-color;
+        color: $dark-text-color
+      }
+    }
+  }
+}
+
+.header-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: black;
+  height: 100vh;
+
+  transition: transform;
+  transition-duration: 300ms;
+  transform: translateX(-100%);
+
+  overflow-y: auto;
+
+  @include onTablet {
+    width: 420px;
+  }
+
+  @include onSmallDesktop {
+    display: none;
+  }
+
+  &--open {
+    transform: translateX(0);
+
+    transition: transform .3s;
+
+    @include onTablet {
+      box-shadow: 50px 0px 80px 50px black;
+    }
+  }
+
+  &__content {
+    block-size: border-box;
+    padding: 24px;
+    padding-top: 0;
+    justify-content: space-between;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    @include onTablet {
+      padding: 24px 0;
+    }
+  }
+
+  &__text {
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 35px;
+    align-items: center;
+  
+    // margin-bottom: 150px;
+  }
+
+  &__link {
+    color: $white-text-color;
+    font-family: $fira-code;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px; /* 107.143% */
+    letter-spacing: 0.56px;
+    text-decoration: none;
+  }
+
+  &__contact-block {
+    align-self: center;
+  }
+
+  &__text-block {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+
+    &__int {
+      color: $main-yellow-text-color;
+      font-size: .95rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 36px; /* 240% */
+      letter-spacing: 0.9px;
+
+      text-transform: uppercase;
+    }
+  }
+
+  &__contact-text {
+    display: block;
+    color: #ECECEC;
+
+    font-size: 1.05rem;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 36px; /* 211.765% */
+    letter-spacing: 1.02px;
+    text-decoration: none;
+  }
+
+  &__country {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 100% */
+    letter-spacing: 1.32px;
+    text-transform: uppercase;
+
+    &__us {
+      display: block;
+      color: #E2209E;
+    }
+
+    &__ua {
+      display: block;
+      color: #07CBF5;
+    }
+  }
+
+  &__icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  &__button {
+    max-width: 400px;
+    width: 100%;
+    height: 55px;
+
+    border: 2px solid #F7E439;
+    background-color: transparent;
+
+    color: #F7E439;
+
+    text-align: center;
+    font-family: Fira Code;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.36px;
+  }
+}

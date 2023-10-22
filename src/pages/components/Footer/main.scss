@@ -1,0 +1,264 @@
+@import "../../../styles/utils/vars";
+@import "../../../styles/utils/mixins";
+
+.footer {
+  padding-top: 10rem;
+
+  font-family: $fira-code;
+
+  @include onBigTablet {
+    padding-top: 250px;
+  }
+
+  @include onDesktop {
+    padding-top: 300px;
+  }
+
+  &__top {
+    height: 100%;
+    width: 100%;
+
+    background: url('../../../images/footer_mobile_bg.svg');
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: top;
+
+    @include onBigTablet {
+      background: url('../../../images/footer_bg.svg');
+      background-size: cover;
+      background-repeat: repeat;
+      background-position: top;
+    }
+  }
+
+  &__bottom {
+    display: none;
+
+    @include onTablet {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__block {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: space-between;
+    row-gap: 2rem;
+    padding: 4rem 1rem;
+
+    @include onBigTablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__list-block {
+    justify-self: flex-end;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 5px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+    font-size: 1.3rem;
+    line-height: 2rem;
+
+    @include onTablet {
+      font-size: 1rem;
+      letter-spacing: 0.96px;
+      row-gap: 3.5px;
+    }
+
+    @include onSmallDesktop {
+      align-items: flex-start;
+      font-size: 1.3rem;
+      line-height: 2rem;
+    }
+
+    &--logo {
+      padding: 0;
+      margin-top: -5px;
+      row-gap: 0;
+      list-style: none;
+
+      @include onBigTablet {
+        margin-top: -10px;
+      }
+    }
+
+    &--position-2 {
+      margin-left: 40px;
+
+      @include onBigTablet {
+        margin-left: 0;
+        column-gap: 20px;
+      }
+    }
+  }
+
+  &__img {
+    width: 150px;
+
+    @include onBigTablet {
+      width: 170px;
+    }
+
+    @include onDesktop {
+      width: 240px;
+    }
+  }
+
+  &__img-block {
+    display: block;
+    margin: 0;
+    padding: 0;
+    line-height: 20px;
+  }
+
+  &__text {
+    display: block;
+
+    margin-top: -10px;
+    margin-bottom: 23px;
+
+    color: $white-text-color;
+    font-family: $fira-code;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px; /* 250% */
+    letter-spacing: 0.48px;
+
+    @include onBigTablet {
+      font-size: 14px;
+      letter-spacing: 0.84px;
+    }
+
+    @include onSmallDesktop {
+    margin-bottom: 32px;
+
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px; /* 150% */
+    letter-spacing: 0.8px;
+    }
+  }
+
+  &__button {
+    padding: 15px 20px;
+    background-color: transparent;
+    border: 2px solid $main-yellow-text-color;
+
+    color: $main-yellow-text-color;
+    text-align: center;
+    font-family: $fira-code;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.28px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $main-yellow-text-color;
+      color: $white-text-color;
+    }
+
+    @include onBigTablet {
+      padding: 15px 30px;
+      font-size: 15px;
+    }
+
+    @include onSmallDesktop {
+      padding: 17px 48px;
+
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      letter-spacing: 0.4px;
+
+    }
+  }
+
+  &__list-title {
+    color: $main-yellow-text-color;
+
+    font-family: $fira-code;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px; /* 250% */
+    letter-spacing: 0.64px;
+
+    @include onBigTablet {
+      font-size: 18px;
+      line-height: 40px; /* 222.222% */
+      letter-spacing: 1.08px;
+    }
+
+    @include onDesktop {
+      font-size: 26px;
+      line-height: 58px; /* 223.077% */
+      letter-spacing: 1.56px;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.70);
+    font-family: Fira Code;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px;
+    letter-spacing: 0.6px;
+
+    @include onBigTablet {
+      font-size: 16px;
+      letter-spacing: 0.96px;
+    }
+
+    @include onDesktop {
+      font-size: 24px;
+      line-height: 58px;
+      letter-spacing: 1.44px;
+    }
+  }
+
+  &__bottom-text {
+    padding: 19px 0;
+    margin: 0 auto;
+
+    color: #868686;
+    font-family: $fira-code;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px; /* 216.667% */
+    letter-spacing: 0.72px;
+
+    @include onBigTablet {
+      font-size: 16px;
+      line-height: 42px; /* 262.5% */
+      letter-spacing: 0.96px;
+    }
+    
+    @include onDesktop {
+      font-size: 24px;
+      letter-spacing: 1.44px;
+    }
+  }
+}

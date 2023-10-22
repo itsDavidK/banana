@@ -1,0 +1,293 @@
+@import "../../../../../styles/utils/vars";
+@import "../../../../../styles/utils/mixins";
+
+.stack-page-title {
+  display: block;
+  margin: 0;
+  position: relative;
+  // display: inline-block;
+
+
+  font-family: $sugo-pro-display;
+  color: $white-text-color;
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 52px; /* 100% */
+  letter-spacing: 3.12px;
+  text-transform: uppercase;
+
+  text-shadow: -1px -1px 0px #000000,
+    1.5px 1.5px 0px #000000,
+    2px 2px 0px #808080;
+
+  @include onBigTablet {
+    font-size: 70px;
+    line-height: 70px; /* 100% */
+    letter-spacing: 4.2px;
+
+  }
+
+  @include onSmallDesktop {
+    font-size: 5.6rem;
+    line-height: 6rem;
+    text-shadow: -1px -1px 0px #000000,
+      1.5px 1.5px 0px #000000,
+      2px 2px 0px #808080;
+  }
+  
+
+  &--yellow {
+    color: $main-yellow-text-color;
+  }
+
+  &--pink {
+    color: $pink2-text-color;
+  }
+}
+
+.stack-page {
+  &__content {
+    padding-top: 10rem;
+
+    @include onTablet {
+      padding-top: 250px;
+    }
+  }
+
+  &__title {
+    display: block;
+    margin: 0 auto;
+
+    font-size: 3.8rem;
+    letter-spacing: 3.12px;
+    margin-bottom: 15px;
+
+    @include onTablet {
+      font-size: 5rem;
+      margin-bottom: 30px;
+      letter-spacing: 4.08px;
+    }
+
+    @include onSmallDesktop {
+      font-size: 6rem;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+.main-stack-pocketbook {
+  height: 630px;
+  background-size: 150px 150px;
+  position: relative;
+  background-position: 65px 64px;
+
+  @include onBigPhone {
+    background-position: 76px 64px;
+  }
+
+  @include onTablet {
+    height: 520px;
+
+    background-size: 200px 200px;
+    background-position: 80px 64px;
+  }
+
+  @include onBigTablet {
+    background-position: 100px 63.5px;
+  }
+
+  @include onBigDesktop {
+    height: 750px;
+    background-position: 23px 63.5px;
+  }
+
+  &--pocketbook {
+    height: 500px;
+
+    @include onTablet {
+      height: 430px;
+    }
+
+    @include onBigDesktop {
+      height: 650px;
+    }
+  }
+
+  background-image: linear-gradient(0deg,transparent 24%,rgba(52,52,56,.6) 25%,rgba(52,52,56,.6) 25.1%,transparent 25%,transparent 74%,rgba(52,52,56,.6) 75%,rgba(52,52,56,.6) 75.1%,transparent 75%,transparent),linear-gradient(90deg,transparent 24%,rgba(52,52,56,.6) 25%,rgba(52,52,56,.6) 25.1%,transparent 25%,transparent 74%,rgba(52,52,56,.6) 75%,rgba(52,52,56,.6) 75.1%,transparent 75%,transparent);
+
+  &__block {
+    padding-top: 28px;
+    margin-left: 12px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    column-gap: 50px;
+    row-gap: 2px;
+
+    transition: translate;
+    transition-property: transform;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+
+    @include onTablet {
+      margin-left: 0;
+      padding-top: 15px;
+      column-gap: 100px;
+    }
+
+    @include onBigDesktop {
+      flex-wrap: wrap;
+      row-gap: 2.5px;
+    }
+
+  }
+
+  &__wrap {
+    width: 600px;
+  }
+
+  &__direction-block {
+    display: flex;
+    flex: 1 0 100%;
+    flex-direction: column;
+    width: 600px;
+    // width: 100%;
+  }
+
+  &__direction {
+    display: inline-block;
+    width: 144.5px;
+    height: 73px;
+
+    color: #808080;
+    text-align: center;
+    font-family: $sugo-pro-display;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 73px;
+    letter-spacing: 2.16px;
+    text-transform: uppercase;
+    background-color: #000;
+
+    @include onTablet {
+      width: 190px;
+      height: 97.5px;
+
+      font-size: 2rem;
+      line-height: 98px;
+      letter-spacing: 2.16px;
+    }
+  }
+
+  &__tool-block {
+    width: 100%;
+    padding-top: 1px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    column-gap: 12px;
+    row-gap: 2px;
+    flex-wrap: wrap;
+
+    @include onTablet {
+      flex-wrap: wrap;
+      flex-direction: row;
+      row-gap: 1.5px;
+    }
+  }
+
+  &__tool {
+    display: flex;
+    column-gap: 2px;
+    row-gap: 2px;
+  }
+
+  &__block-img {
+    width: 73px;
+    height: 73px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include onTablet {
+      width: 98px;
+      height: 98px;
+    }
+  }
+
+  &__img {
+    width: 50px;
+    height: 50px;
+  }
+
+  &__tool-name {
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 144.5px;
+    height: 73px;
+    background-color: #000;
+
+    color: $white-text-color;
+    font-family: $fira-code;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+
+    @include onTablet {
+      margin-top: 1px;
+      width: 190px;
+      height: 98px;
+
+      font-size: 1.2rem;
+      letter-spacing: 1.2px;
+    }
+
+    @include onDesktop {
+      height: 97.5px;
+    }
+
+  }
+
+  &__bottom {
+    margin-left: 3px;
+    display: flex;
+    column-gap: 10px;
+
+    @include onTablet {
+      margin-left: 0;
+      column-gap: 0;
+    }
+
+    @include onBigDesktop {
+      display: none;
+    }
+
+
+  }
+
+  &__arrow-block {
+    width: 73px;
+    height: 73px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include onTablet {
+      width: 98px;
+      height: 98px;
+    }
+  }
+
+  &__arrow-img {
+    width: 50px;
+    height: 50px;
+  }
+}

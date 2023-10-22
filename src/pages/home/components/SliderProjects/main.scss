@@ -1,0 +1,140 @@
+@import "../../../../styles/utils/vars";
+@import "../../../../styles/utils/mixins";
+
+.slider-projects {
+  display: flex;
+  column-gap: 24px;
+
+  margin-bottom: 2rem;
+
+  transition: translate;
+  transition-property: transform;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+
+  @include onBigTablet {
+    column-gap: 12px;
+  }
+
+  &__block {
+    flex: 1 0 100%;
+    text-decoration: none;
+
+    @include onBigTablet {
+      flex: 0;
+      min-width: 600px;
+      height: 100%;
+    }
+
+    @include onDesktop {
+      min-width: 850px;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // width: 100%;
+    height: max-content;
+
+    padding: 25px;
+
+    background: url('../../../../images/projects_bg.png');
+    background-size: 100% 100%;
+    // background-repeat: no-repeat;
+    // background-position: center center;
+
+    @include onTablet {
+      box-sizing: border-box;
+      padding: 4rem 50px;
+      // background-size: contain;
+    }
+
+    @include onDesktop {
+      padding: 100px 0;
+    }
+  }
+
+  &__type-info {
+    margin-top: 0;
+    margin-bottom: 6rem;
+
+    color: $main-yellow-text-color;
+    font-family: $fira-code;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 1.44px;
+    text-transform: uppercase;
+
+    @include onDesktop {
+      margin-bottom: 120px;
+
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: 1.44px;
+      text-transform: uppercase;
+    }
+  }
+
+  &__company-img {
+    width: 15rem;
+    margin-bottom: 6rem;
+
+    @include onTablet {
+      margin-bottom: 5rem;
+    }
+
+    @include onDesktop {
+      width: 330px;
+      margin-bottom: 120px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: center;
+    column-gap: .5rem;
+    flex-wrap: wrap;
+    row-gap: .5rem;
+
+    @include onBigTablet {
+      column-gap: 12px;
+    }
+  }
+
+  &__direction {
+    block-size: border-box;
+    padding: 7px;
+    border: 1px dashed $pink-text-color;
+
+    color: $white-text-color;
+    font-family: $fira-code;
+    font-size: .7rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.6px;
+
+    @include onTablet {
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 0.9px;
+    }
+
+    @include onDesktop {
+      padding: 10px 14px;
+      font-size: 21px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: 1.26px;
+    }
+  }
+}
