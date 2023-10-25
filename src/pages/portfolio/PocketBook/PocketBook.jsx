@@ -126,7 +126,8 @@ export default function PocketBook() {
                 <div className="pocketbook-top__info-block">
                   <span className="pocketbook-top__info-block__type">industry</span>
                   <span className="pocketbook-top__info-block__description">
-                   Online distribution
+                    Online <br className="pocketbook-top__br" />
+                    distribution
                   </span>
                 </div>
                 <div className="pocketbook-top__line"></div>
@@ -141,8 +142,8 @@ export default function PocketBook() {
                 </div>
                 <div className="pocketbook-top__line"></div>
                 <div className="pocketbook-top__info-block">
-                  <span className="pocketbook-top__info-block__type">country</span>
-                  <span className="pocketbook-top__info-block__description">Switzerland</span>
+                  <span className="pocketbook-top__info-block__type">project state</span>
+                  <span className="pocketbook-top__info-block__description">Finalised</span>
                 </div>
               </div>
             </div>
